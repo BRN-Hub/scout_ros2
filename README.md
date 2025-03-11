@@ -26,7 +26,7 @@ This repository contains minimal packages to control the scout robot using ROS.
     $ mkdir -p ~/ros2_ws/src
     $ cd ~/ros2_ws/src
     $ git clone https://github.com/agilexrobotics/ugv_sdk.git
-    $ git clone https://github.com/agilexrobotics/scout_ros2.git
+    $ git clone https://github.com/BRN-Hub/scout_ros2.git
     $ cd ..
     $ colcon build
     ```
@@ -44,3 +44,11 @@ This repository contains minimal packages to control the scout robot using ROS.
     ```
     $ ros2 run teleop_twist_keyboard teleop_twist_keyboard
     ```
+
+### QoS
+You have to change the QoS to display properly the model
+
+    Depth: 5
+    History Policy: Keep Last
+    Reliability Policy: Best Effort
+    Durability Policy: Transient Local
